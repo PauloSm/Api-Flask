@@ -11,7 +11,8 @@ def create_app():
 	app = Flask(__name__)
 	#app.config.from_object(Config)
 	app.config['DEBUG'] = True
-	app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+psycopg2://pc89:241089@localhost/smilecook"
+	#name deve ser o nome do Role e pass a senha
+	app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+psycopg2://name:pass@localhost/smilecook"
 	app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 	register_extensions(app)
